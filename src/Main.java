@@ -1,82 +1,112 @@
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.*;
 import org.w3c.dom.Document;
-//import Helper.convertStringToXMLDocument;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.util.*;
 import java.io.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.zip.GZIPInputStream;
+import java.util.concurrent.*;
+import java.util.zip.GZIPOutputStream;
 
 
 public class Main implements Runnable{
     public String[] array;
-    public int low, high;
-    public Stream<String> stream;
-    //a storing variable
+    public int current, papa;
+    public DocumentBuilder builder;
+    public Document papaDoc;
 
-    public Main(String[] arr, int l, int h){
+    public Main(String[] arr, DocumentBuilder builderr, Document doc, int i, int papaindex){
         array= arr;
-        low= l;
-        high= h;
+        builder= builderr;
+        current= i;
+        papaDoc= doc;
+        papa= papaindex;
     }
 
-
     public void run(){
-        String str= array[low];
-        String filepath= "./src/" + str;
-        //read the file
+        String currentpath= "./src/" + array[current];
+        String papaPath= "./src/" + array[papa];
         try{
-            GZIPInputStream gzip = new GZIPInputStream(new FileInputStream(str));
-            BufferedReader br = new BufferedReader(new InputStreamReader(gzip));
-            stream= br.lines();
+//            GZIPInputStream gzip = new GZIPInputStream(new FileInputStream(filepath));
+//            BufferedReader br = new BufferedReader(new InputStreamReader(gzip));
+            Document currentDoc= builder.parse(new File(currentpath));
+            NodeList papaList= papaDoc.getElementsByTagName("job");
+            System.out.println("During: " + papaList.getLength());
+            NodeList currentList= currentDoc.getElementsByTagName("job");
+            for(int i=0; i<currentList.getLength(); i++){
+                Node n= (Node) papaDoc.importNode(currentList.item(i), true);
+                papaList.item(i).getParentNode().appendChild(n);
+            }
         }catch(Exception e){
             System.out.println(e);
         }
     }
 
-    public Stream<String> getResult(){
-        return stream;
+    public void getResult(){
+        return;
     }
 
 
     public static void main(String[] args) throws InterruptedException{
-        Scanner sc= new Scanner(System.in);
-        int num= sc.nextInt();
+        int num= 4;
+        long[] sizes= new long[num];
+        long max= 0;
+        int index= -1;
         String[] array= new String[num];
-        for (int i=0; i<num; i++){
-            array[i]= sc.next();
-        }
-        Main[] container= new Main[num];
-        long startTime = System.nanoTime();
-        for (int i=0; i<num; i++){
-            container[i]= new Main(array, i, i+1);
-        }
-        Thread[] threads= new Thread[num];
-        for (int i=0; i<num; i++){
-            threads[i]= new Thread(container[i]);
-            threads[i].start();
-        }
-        for(int i=0; i<num; i++){
-            threads[i].join();
-        }
+        array[0]= "05eda891-774e-4086-a72a-67b07f4c2db8.xml";
+        array[1]= "5ced6337-6e51-4d0d-811a-b79de53b3501.xml";
+        array[2]= "6eb1b51e-f7d9-4d00-92c5-9833385fef48.xml";
+        array[3]= "8e6f27e2-7116-476c-996c-31ba243f4bce.xml";
 
-        Stream<String> final1= Stream.concat(container[0].getResult(), container[1].getResult());
-        Stream<String> final2= Stream.concat(container[2].getResult(), container[3].getResult());
-        Stream<String> out= Stream.concat(final1, final2);
-        Document doc = Helper.convertStringToXMLDocument(out.collect(Collectors.joining()));
-        TransformerFactory tf = TransformerFactory.newInstance();
-        Transformer transformer;
+        for (int i=0; i<num; i++){
+          long a= new File("./src/" + array[i]).length();
+          System.out.println(a);
+          sizes[i]= a;
+        }
+        for (int i=0; i<num; i++){
+            if(sizes[i]> max){
+                max= sizes[i];
+                index= i;
+            }
+        }
+        System.out.println(index);
         try{
-            transformer = tf.newTransformer();
-            FileOutputStream outStream = new FileOutputStream(new File("out.xml.gz"));
-            transformer.transform(new DOMSource(doc), new StreamResult(outStream));
-        }catch (Exception e){
+            DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
+            domFactory.setIgnoringComments(true);
+            DocumentBuilder builder = domFactory.newDocumentBuilder();
+            String papaPath= "./src/" + array[index];
+            Document papaDoc= builder.parse(papaPath);
+            System.out.println("Before: " + papaDoc.getElementsByTagName("job").getLength());
+            ExecutorService threadPool= Executors.newFixedThreadPool(5);
+
+            Main[] container= new Main[num-1];
+            long startTime= System.nanoTime();
+            int count= 0;
+            for(int i=0; i<num; i++){
+                if(i!= index){
+                    container[count]= new Main(array, builder, papaDoc, i, index);
+                    count+= 1;
+                }
+            }
+            for(int i=0; i<num-1; i++){
+                threadPool.execute(container[i]);
+            }
+            if(!threadPool.isTerminated()){
+                threadPool.shutdown();
+                threadPool.awaitTermination(5L, TimeUnit.SECONDS);
+            }
+            TransformerFactory tf = TransformerFactory.newInstance();
+            Transformer transformer = tf.newTransformer();
+            FileOutputStream outStream = new FileOutputStream(new File("mergedxml.xml"));//do gzipoutput stream here in the final draft
+            transformer.transform(new DOMSource(papaDoc), new StreamResult(outStream));
+            System.out.println("merge complete");
+
+            long endTime = System.nanoTime();
+            System.out.println("Time taken is about " + (endTime-startTime)/1e9 + " seconds.");
+        }catch(Exception e){
             System.out.println(e);
         }
-        long endTime = System.nanoTime();
-        System.out.println("Time taken is about " + (endTime-startTime)/1e9 + " seconds.");
-
     }
 }
