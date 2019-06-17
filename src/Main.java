@@ -11,28 +11,30 @@ import java.util.concurrent.*;
 import java.util.zip.GZIPOutputStream;
 
 
-public class Main implements Runnable{
+class Appender implements Runnable{
     public String[] array;
     public int current, papa;
-    public DocumentBuilder builder;
     public Document papaDoc;
+    public NodeList papaList;
 
-    public Main(String[] arr, DocumentBuilder builderr, Document doc, int i, int papaindex){
+    public Appender(String[] arr, Document doc, NodeList papal, int i, int papaindex){
         array= arr;
-        builder= builderr;
         current= i;
         papaDoc= doc;
+        papaList= papal;
         papa= papaindex;
     }
 
     public void run(){
         String currentpath= "./src/" + array[current];
         String papaPath= "./src/" + array[papa];
-        try{
+        try{//put a check here for xml.gz files.
 //            GZIPInputStream gzip = new GZIPInputStream(new FileInputStream(filepath));
 //            BufferedReader br = new BufferedReader(new InputStreamReader(gzip));
+            DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
+            domFactory.setIgnoringComments(true);
+            DocumentBuilder builder = domFactory.newDocumentBuilder();
             Document currentDoc= builder.parse(new File(currentpath));
-            NodeList papaList= papaDoc.getElementsByTagName("job");
             System.out.println("During: " + papaList.getLength());
             NodeList currentList= currentDoc.getElementsByTagName("job");
             for(int i=0; i<currentList.getLength(); i++){
@@ -47,7 +49,11 @@ public class Main implements Runnable{
     public void getResult(){
         return;
     }
+}
 
+
+public class Main{
+    public static NodeList papa;
 
     public static void main(String[] args) throws InterruptedException{
         int num= 4;
@@ -78,15 +84,16 @@ public class Main implements Runnable{
             DocumentBuilder builder = domFactory.newDocumentBuilder();
             String papaPath= "./src/" + array[index];
             Document papaDoc= builder.parse(papaPath);
+            papa= papaDoc.getElementsByTagName("job");
             System.out.println("Before: " + papaDoc.getElementsByTagName("job").getLength());
             ExecutorService threadPool= Executors.newFixedThreadPool(5);
 
-            Main[] container= new Main[num-1];
+            Appender[] container= new Appender[num-1];
             long startTime= System.nanoTime();
             int count= 0;
             for(int i=0; i<num; i++){
                 if(i!= index){
-                    container[count]= new Main(array, builder, papaDoc, i, index);
+                    container[count]= new Appender(array, papaDoc, papa, i, index);
                     count+= 1;
                 }
             }
@@ -95,11 +102,11 @@ public class Main implements Runnable{
             }
             if(!threadPool.isTerminated()){
                 threadPool.shutdown();
-                threadPool.awaitTermination(5L, TimeUnit.SECONDS);
+                threadPool.awaitTermination(3L, TimeUnit.SECONDS);
             }
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer transformer = tf.newTransformer();
-            FileOutputStream outStream = new FileOutputStream(new File("mergedxml.xml"));//do gzipoutput stream here in the final draft
+            GZIPOutputStream outStream = new GZIPOutputStream(new FileOutputStream(new File("mergedxml.xml.gz")));//do gzipoutput stream here in the final draft
             transformer.transform(new DOMSource(papaDoc), new StreamResult(outStream));
             System.out.println("merge complete");
 
