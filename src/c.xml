@@ -1,0 +1,12 @@
+<staff>
+    <job>
+        <name>Aditya Mittal</name>
+        <number>Insert something here!</number>
+        <position>Ex- Full Timer</position>
+    </job>
+    <job>
+        <name>Krishna Kishore</name>
+        <number>Insert somehting here again</number>
+        <position>Full-timer Pro*0.9</position>
+    </job>
+</staff>

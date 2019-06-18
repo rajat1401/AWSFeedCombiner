@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6f37dd9e-6cfb-4348-a8a9-4ee03cb227e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mergedxml.xml.gz.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mergedxml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mergedxml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FeedCombinerTesting/5ced6337-6e51-4d0d-811a-b79de53b3501.xml.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FeedCombinerTesting/6eb1b51e-f7d9-4d00-92c5-9833385fef48.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FeedCombinerTesting/Appender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FeedCombinerTesting/Appender.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FeedCombinerTesting/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FeedCombinerTesting/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/5ced6337-6e51-4d0d-811a-b79de53b3501.xml.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/6eb1b51e-f7d9-4d00-92c5-9833385fef48.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,16 +20,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="252">
+              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1821#1822#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,6 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -80,19 +96,28 @@
             <path>
               <item name="FeedCombinerTesting" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeedCombinerTesting" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeedCombinerTesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeedCombinerTesting" type="462c0819:PsiDirectoryNode" />
+              <item name="AWSFeedCombiner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeedCombinerTesting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeedCombinerTesting" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560769033891" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560841002418" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -145,47 +170,48 @@
       <option name="presentableId" value="Default" />
       <updated>1560507732051</updated>
       <workItem from="1560507733309" duration="21848000" />
+      <workItem from="1560772861373" duration="8494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21848000" />
+    <option name="totallyTimeSpent" value="30660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="24" width="1421" height="818" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="aws.explorer" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.137781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13923132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.26721764" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Learn" order="3" />
+      <window_info id="aws.explorer" order="4" side_tool="true" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36501378" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944905" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28374657" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30027547" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34573004" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.29338843" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,14 +281,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/src.zip!/java/lang/Runtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+        <state relative-caret-position="252">
+          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1821#1822#0" expanded="true" />
           </folding>
         </state>
       </provider>
