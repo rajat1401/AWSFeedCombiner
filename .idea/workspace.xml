@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2794149-e3c6-4a94-8a5a-dc731b1933f9" name="Default Changelist" comment="" />
+    <list default="true" id="e2794149-e3c6-4a94-8a5a-dc731b1933f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/test/java/helloworld/AppTest.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/HelloWorldFunction/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="29">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#669#677#0" expanded="true" />
@@ -32,10 +37,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HelloWorldFunction/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="124">
+              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,14 +66,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/feedcombiner/S3Iterator.java" />
         <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/feedcombiner/App.java" />
         <option value="$PROJECT_DIR$/HelloWorldFunction/pom.xml" />
-        <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" />
         <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" />
+        <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" />
       </list>
     </option>
   </component>
@@ -75,6 +92,7 @@
     <option name="width" value="1421" />
     <option name="height" value="818" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -103,35 +121,7 @@
               <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeedCombiner" type="462c0819:PsiDirectoryNode" />
               <item name="HelloWorldFunction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FeedCombiner" type="462c0819:PsiDirectoryNode" />
-              <item name="HelloWorldFunction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FeedCombiner" type="462c0819:PsiDirectoryNode" />
-              <item name="HelloWorldFunction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="helloworld" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FeedCombiner" type="462c0819:PsiDirectoryNode" />
-              <item name="HelloWorldFunction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="helloworld" type="462c0819:PsiDirectoryNode" />
-              <item name="S3Iterator.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
@@ -145,6 +135,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
   </component>
   <component name="RunDashboard">
@@ -159,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="AWS Lambda.[Local] App (4)">
+  <component name="RunManager" selected="AWS Lambda.[Local] App (5)">
     <configuration name="[Local] App (1)" type="aws.lambda" factoryName="Local" temporary="true">
       <option name="credentialProviderId" value="profile:default" />
       <option name="regionId" value="us-east-1" />
@@ -231,12 +225,13 @@
       <option name="input" value="{&#10;  &quot;Records&quot;: [&#10;    {&#10;      &quot;cf&quot;: {&#10;        &quot;config&quot;: {&#10;          &quot;distributionId&quot;: &quot;EXAMPLE&quot;&#10;        },&#10;        &quot;request&quot;: {&#10;          &quot;uri&quot;: &quot;/test&quot;,&#10;          &quot;method&quot;: &quot;GET&quot;,&#10;          &quot;clientIp&quot;: &quot;2001:cdba::3257:9652&quot;,&#10;          &quot;headers&quot;: {&#10;            &quot;host&quot;: [&#10;              {&#10;                &quot;key&quot;: &quot;Host&quot;,&#10;                &quot;value&quot;: &quot;d123.cf.net&quot;&#10;              }&#10;            ],&#10;            &quot;user-agent&quot;: [&#10;              {&#10;                &quot;key&quot;: &quot;User-Agent&quot;,&#10;                &quot;value&quot;: &quot;Test Agent&quot;&#10;              }&#10;            ],&#10;            &quot;user-name&quot;: [&#10;              {&#10;                &quot;key&quot;: &quot;User-Name&quot;,&#10;                &quot;value&quot;: &quot;aws-cloudfront&quot;&#10;              }&#10;            ]&#10;          }&#10;        }&#10;      }&#10;    }&#10;  ]&#10;}" />
       <method v="2" />
     </configuration>
-    <configuration name="[Local] App" type="aws.lambda" factoryName="Local" temporary="true" nameIsGenerated="true">
+    <configuration name="[Local] App (5)" type="aws.lambda" factoryName="Local" temporary="true" nameIsGenerated="true">
       <option name="credentialProviderId" value="profile:default" />
       <option name="regionId" value="us-east-1" />
       <option name="logicalFunctionName" value="HelloWorldFunction" />
       <option name="templateFile" value="$PROJECT_DIR$/template.yaml" />
       <option name="useTemplate" value="true" />
+      <option name="input" value="{&#10;  &quot;1&quot;: &quot;puppy&quot;&#10;}" />
       <method v="2" />
     </configuration>
     <configuration name="[Local] HelloWorldFunction" type="aws.lambda" factoryName="Local" nameIsGenerated="true">
@@ -247,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="AWS Lambda.[Local] App (5)" />
         <item itemvalue="AWS Lambda.[Local] App (4)" />
         <item itemvalue="AWS Lambda.[Local] App (3)" />
         <item itemvalue="AWS Lambda.[Local] App (1)" />
         <item itemvalue="AWS Lambda.[Local] App (1)" />
-        <item itemvalue="AWS Lambda.[Local] App (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -288,17 +283,18 @@
     <frame x="5" y="24" width="1421" height="818" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="aws.explorer" sideWeight="0.5009141" side_tool="true" visible="true" weight="0.17258883" />
+      <window_info id="aws.explorer" sideWeight="0.24257426" side_tool="true" visible="true" weight="0.17258883" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908593" visible="true" weight="0.17258883" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7574257" visible="true" weight="0.17258883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49963742" weight="0.20661157" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49963742" visible="true" weight="0.44352618" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5003626" side_tool="true" weight="0.3292011" />
-      <window_info active="true" anchor="bottom" id="Build" sideWeight="0.49963742" visible="true" weight="0.24655648" />
+      <window_info anchor="bottom" id="Build" sideWeight="0.49963742" weight="0.24655648" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -354,25 +350,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorldFunction/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="208">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
+    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/test/java/helloworld/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="52">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="29">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#669#677#0" expanded="true" />
@@ -382,5 +375,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.12.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FeedCombiner</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

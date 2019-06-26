@@ -2,6 +2,7 @@ package helloworld;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import com.amazonaws.services.s3.*;
 import com.amazonaws.services.lambda.runtime.Context;
@@ -10,9 +11,9 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 /**
  * Handler for requests to Lambda function.
  */
-public class App implements RequestHandler<String, String> {
+public class App implements RequestHandler<Object, String> {
 
-    public String handleRequest(final String input, final Context context) {
+    public String handleRequest(final Object input, final Context context) {
         int num= 4;
         List<String> names= new ArrayList<String>();
         List<Integer> sizes= new ArrayList<Integer>();
@@ -35,6 +36,9 @@ public class App implements RequestHandler<String, String> {
         }catch(Exception e) {
             System.out.println(e);
         }
-        return "1";
+//        HashMap<String, String> hashmap=new HashMap<String, String>();
+//        hashmap.put("1", "puppy");
+//        return hashmap;
+        return "Hellow from the other side";
     }
 }
