@@ -1,12 +1,10 @@
 package helloworld;
 
 import com.amazonaws.services.s3.AmazonS3;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
-import java.util.zip.GZIPInputStream;
 
 
 class InputStreamIterator{
@@ -84,20 +82,22 @@ class InputStreamIterator{
 public class S3Iterator extends InputStream{
     public List<String> nameList;
     public List<Integer> sizeList;
-    public List<InputStream> streamList;
+    public InputStream streamList;
     public AmazonS3 client;
     public Long currentBytesServed;
+    public File outputFile;
     public int currentFileIndex;
     public int bufferSize;
 
-    public S3Iterator(List<String> names, List<Integer> sizes, List<InputStream> streams, AmazonS3 cli){
+    public S3Iterator(List<String> names, List<Integer> sizes, InputStream stream, AmazonS3 cli, File opFile){
         nameList= names;
         sizeList= sizes;
-        streamList= streams;
+        streamList= stream;
         currentFileIndex= 0;
         currentBytesServed= 0L;
-        bufferSize= 5000000;
+        bufferSize= 8000000;
         client= cli;
+        outputFile= opFile;
     }
 
 
@@ -114,13 +114,13 @@ public class S3Iterator extends InputStream{
             if (hasNext()) {
                 String str= nameList.get(currentFileIndex);
                 if(str.substring(str.length()-2).equals("gz")){//might not work for .gz files.
-                    streamList.set(0, client.getObject("rajat-lamda-edge-test", nameList.get(currentFileIndex)).getObjectContent());
+                    streamList= client.getObject("rajat-lamda-edge-test", str).getObjectContent();
                 }else {
-                    streamList.set(0, client.getObject("rajat-lamda-edge-test", nameList.get(currentFileIndex)).getObjectContent());
+                    streamList= client.getObject("rajat-lamda-edge-test", str).getObjectContent();
                 }
-                sizeList.add(streamList.get(0).available());
+                sizeList.add(streamList.available());
                 System.out.println("Size of " + nameList.get(currentFileIndex) + " is " + sizeList.get(currentFileIndex));
-                current= new InputStreamIterator(streamList.get(0), bufferSize);
+                current= new InputStreamIterator(streamList, bufferSize);
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -134,6 +134,7 @@ public class S3Iterator extends InputStream{
             while (currentIterator.hasNext()) {
                 byte[] arr= currentIterator.next();
                 System.out.println("Here we go again for " + nameList.get(currentFileIndex));
+                (new FileOutputStream(outputFile, true)).write(arr);
                 System.out.println(arr);
             }
             currentBytesServed+= sizeList.get(currentFileIndex);
