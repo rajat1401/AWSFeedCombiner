@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2794149-e3c6-4a94-8a5a-dc731b1933f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/test/java/helloworld/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/HelloWorldFunction/target/" />
@@ -21,35 +19,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            <state relative-caret-position="217">
+              <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#669#677#0" expanded="true" />
-                <element signature="e#723#732#0" expanded="true" />
-                <element signature="e#784#797#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HelloWorldFunction/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+            <state relative-caret-position="152">
+              <caret line="136" column="68" selection-start-line="136" selection-start-column="68" selection-end-line="136" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +61,8 @@
         <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/feedcombiner/S3Iterator.java" />
         <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/feedcombiner/App.java" />
         <option value="$PROJECT_DIR$/HelloWorldFunction/pom.xml" />
-        <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" />
         <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" />
+        <option value="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" />
       </list>
     </option>
   </component>
@@ -121,11 +107,8 @@
               <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeedCombiner" type="462c0819:PsiDirectoryNode" />
               <item name="HelloWorldFunction" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FeedCombiner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -153,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="AWS Lambda.[Local] App (5)">
+  <component name="RunManager" selected="AWS Lambda.[Local] App">
     <configuration name="[Local] App (1)" type="aws.lambda" factoryName="Local" temporary="true">
       <option name="credentialProviderId" value="profile:default" />
       <option name="regionId" value="us-east-1" />
@@ -198,15 +181,6 @@
       <option name="input" value="&quot;puppy&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="[Local] App (2)" type="aws.lambda" factoryName="Local" temporary="true" nameIsGenerated="true">
-      <option name="credentialProviderId" value="profile:default" />
-      <option name="regionId" value="us-east-1" />
-      <option name="logicalFunctionName" value="HelloWorldFunction" />
-      <option name="templateFile" value="$PROJECT_DIR$/template.yaml" />
-      <option name="useTemplate" value="true" />
-      <option name="input" value="{&#10;  &quot;Records&quot;: [&#10;    {&#10;      &quot;cf&quot;: {&#10;        &quot;config&quot;: {&#10;          &quot;distributionId&quot;: &quot;EXAMPLE&quot;&#10;        },&#10;        &quot;request&quot;: {&#10;          &quot;uri&quot;: &quot;/test&quot;,&#10;          &quot;method&quot;: &quot;GET&quot;,&#10;          &quot;clientIp&quot;: &quot;2001:cdba::3257:9652&quot;,&#10;          &quot;headers&quot;: {&#10;            &quot;host&quot;: [&#10;              {&#10;                &quot;key&quot;: &quot;Host&quot;,&#10;                &quot;value&quot;: &quot;d123.cf.net&quot;&#10;              }&#10;            ],&#10;            &quot;user-agent&quot;: [&#10;              {&#10;                &quot;key&quot;: &quot;User-Agent&quot;,&#10;                &quot;value&quot;: &quot;Test Agent&quot;&#10;              }&#10;            ],&#10;            &quot;user-name&quot;: [&#10;              {&#10;                &quot;key&quot;: &quot;User-Name&quot;,&#10;                &quot;value&quot;: &quot;aws-cloudfront&quot;&#10;              }&#10;            ]&#10;          }&#10;        }&#10;      }&#10;    }&#10;  ]&#10;}" />
-      <method v="2" />
-    </configuration>
     <configuration name="[Local] App (3)" type="aws.lambda" factoryName="Local" temporary="true" nameIsGenerated="true">
       <option name="credentialProviderId" value="profile:default" />
       <option name="regionId" value="us-east-1" />
@@ -234,6 +208,15 @@
       <option name="input" value="{&#10;  &quot;1&quot;: &quot;puppy&quot;&#10;}" />
       <method v="2" />
     </configuration>
+    <configuration name="[Local] App" type="aws.lambda" factoryName="Local" temporary="true" nameIsGenerated="true">
+      <option name="credentialProviderId" value="profile:default" />
+      <option name="regionId" value="us-east-1" />
+      <option name="logicalFunctionName" value="HelloWorldFunction" />
+      <option name="templateFile" value="$PROJECT_DIR$/template.yaml" />
+      <option name="useTemplate" value="true" />
+      <option name="input" value="{&#10;  &quot;1&quot;:  &quot;puppy&quot;,&#10;  &quot;2&quot;:  &quot;woofie&quot;&#10;}" />
+      <method v="2" />
+    </configuration>
     <configuration name="[Local] HelloWorldFunction" type="aws.lambda" factoryName="Local" nameIsGenerated="true">
       <option name="logicalFunctionName" value="HelloWorldFunction" />
       <option name="templateFile" value="$PROJECT_DIR$/template.yaml" />
@@ -242,10 +225,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="AWS Lambda.[Local] App" />
         <item itemvalue="AWS Lambda.[Local] App (5)" />
         <item itemvalue="AWS Lambda.[Local] App (4)" />
         <item itemvalue="AWS Lambda.[Local] App (3)" />
-        <item itemvalue="AWS Lambda.[Local] App (1)" />
         <item itemvalue="AWS Lambda.[Local] App (1)" />
       </list>
     </recent_temporary>
@@ -283,21 +266,21 @@
     <frame x="5" y="24" width="1421" height="818" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="aws.explorer" sideWeight="0.24257426" side_tool="true" visible="true" weight="0.17258883" />
+      <window_info id="aws.explorer" sideWeight="0.24193548" side_tool="true" visible="true" weight="0.17258883" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7574257" visible="true" weight="0.17258883" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7580645" visible="true" weight="0.17258883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49963742" visible="true" weight="0.44352618" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49963742" visible="true" weight="0.3168044" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5003626" side_tool="true" weight="0.3292011" />
       <window_info anchor="bottom" id="Build" sideWeight="0.49963742" weight="0.24655648" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44352618" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -362,23 +345,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
+    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        <state relative-caret-position="152">
+          <caret line="136" column="68" selection-start-line="136" selection-start-column="68" selection-end-line="136" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#669#677#0" expanded="true" />
-            <element signature="e#723#732#0" expanded="true" />
-            <element signature="e#784#797#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
+    <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+        <state relative-caret-position="217">
+          <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
