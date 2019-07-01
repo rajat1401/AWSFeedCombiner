@@ -5,6 +5,7 @@ import com.amazonaws.services.s3.AmazonS3;
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.zip.GZIPOutputStream;
 
 
 class InputStreamIterator{
@@ -85,19 +86,19 @@ public class S3Iterator extends InputStream{
     public InputStream streamList;
     public AmazonS3 client;
     public Long currentBytesServed;
-    public File outputFile;
+    public GZIPOutputStream zipStream;
     public int currentFileIndex;
     public int bufferSize;
 
-    public S3Iterator(List<String> names, List<Integer> sizes, InputStream stream, AmazonS3 cli, File opFile){
+    public S3Iterator(List<String> names, List<Integer> sizes, InputStream stream, AmazonS3 cli, GZIPOutputStream gzip){
         nameList= names;
         sizeList= sizes;
         streamList= stream;
         currentFileIndex= 0;
         currentBytesServed= 0L;
-        bufferSize= 8000000;
+        bufferSize= 10000000;
         client= cli;
-        outputFile= opFile;
+        zipStream= gzip;
     }
 
 
@@ -134,7 +135,7 @@ public class S3Iterator extends InputStream{
             while (currentIterator.hasNext()) {
                 byte[] arr= currentIterator.next();
                 System.out.println("Here we go again for " + nameList.get(currentFileIndex));
-                (new FileOutputStream(outputFile, true)).write(arr);
+                zipStream.write(arr);
                 System.out.println(arr);
             }
             currentBytesServed+= sizeList.get(currentFileIndex);
