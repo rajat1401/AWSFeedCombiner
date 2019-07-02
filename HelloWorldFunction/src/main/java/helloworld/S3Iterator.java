@@ -1,7 +1,5 @@
 package helloworld;
 
-import com.amazonaws.services.s3.AmazonS3;
-
 import java.io.*;
 import java.util.Arrays;
 import java.util.List;
@@ -83,21 +81,19 @@ class InputStreamIterator{
 public class S3Iterator extends InputStream{
     public List<String> nameList;
     public List<Integer> sizeList;
-    public InputStream streamList;
-    public AmazonS3 client;
+    public List<InputStream> streamList;
     public Long currentBytesServed;
     public GZIPOutputStream zipStream;
     public int currentFileIndex;
     public int bufferSize;
 
-    public S3Iterator(List<String> names, List<Integer> sizes, InputStream stream, AmazonS3 cli, GZIPOutputStream gzip){
+    public S3Iterator(List<String> names, List<Integer> sizes, List<InputStream> stream, GZIPOutputStream gzip){
         nameList= names;
         sizeList= sizes;
         streamList= stream;
         currentFileIndex= 0;
         currentBytesServed= 0L;
         bufferSize= 10000000;
-        client= cli;
         zipStream= gzip;
     }
 
@@ -113,15 +109,8 @@ public class S3Iterator extends InputStream{
         InputStreamIterator current= null;
         try {
             if (hasNext()) {
-                String str= nameList.get(currentFileIndex);
-                if(str.substring(str.length()-2).equals("gz")){//might not work for .gz files.
-                    streamList= client.getObject("rajat-lamda-edge-test", str).getObjectContent();
-                }else {
-                    streamList= client.getObject("rajat-lamda-edge-test", str).getObjectContent();
-                }
-                sizeList.add(streamList.available());
                 System.out.println("Size of " + nameList.get(currentFileIndex) + " is " + sizeList.get(currentFileIndex));
-                current= new InputStreamIterator(streamList, bufferSize);
+                current= new InputStreamIterator(streamList.get(currentFileIndex), bufferSize);
             }
         }catch (Exception e){
             e.printStackTrace();

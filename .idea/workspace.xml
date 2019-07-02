@@ -5,12 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/target/HelloWorld-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/target/HelloWorld-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/target/classes/helloworld/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/target/classes/helloworld/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/target/classes/helloworld/InputStreamIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/target/classes/helloworld/InputStreamIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/target/classes/helloworld/S3Iterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/target/classes/helloworld/S3Iterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorldFunction/target/original-HelloWorld-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorldFunction/target/original-HelloWorld-1.0.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/HelloWorldFunction/target/" />
@@ -29,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+            <state relative-caret-position="11">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+            <state relative-caret-position="-1094">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,7 +73,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="5" />
     <option name="y" value="24" />
     <option name="width" value="1421" />
@@ -287,18 +281,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="24" width="1421" height="818" extended-state="1" />
+    <frame x="5" y="24" width="1421" height="818" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="aws.explorer" sideWeight="0.2411215" side_tool="true" visible="true" weight="0.17258883" />
+      <window_info id="aws.explorer" sideWeight="0.24235295" side_tool="true" visible="true" weight="0.16896302" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7588785" visible="true" weight="0.17258883" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75764704" visible="true" weight="0.16896302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49963742" visible="true" weight="0.2630854" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49963742" visible="true" weight="0.41460055" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5003626" side_tool="true" weight="0.3292011" />
       <window_info anchor="bottom" id="Build" sideWeight="0.49963742" weight="0.24655648" />
       <window_info anchor="bottom" id="Messages" />
@@ -369,10 +363,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/S3Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+        <state relative-caret-position="-1094">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -381,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HelloWorldFunction/src/main/java/helloworld/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        <state relative-caret-position="11">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
